@@ -53,7 +53,3 @@ document.querySelectorAll('.session-actions').forEach((group) => {
     group.innerHTML = `<span class="status ${allowed ? 'done' : 'error'}">${allowed ? 'Approved' : 'Denied'}</span>`;
   });
 });
-
-// Footer year
-const y = document.getElementById('year');
-if (y) y.textContent = new Date().getFullYear();

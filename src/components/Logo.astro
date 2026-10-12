@@ -1,0 +1,13 @@
+---
+import BellIcon from './BellIcon.astro';
+
+interface Props {
+  small?: boolean;
+}
+
+const { small = false } = Astro.props;
+---
+<a href="#" class:list={['logo', { small }]} aria-label="Herdbell home">
+  <span class="logo-mark"><BellIcon size={small ? 14 : 18} /></span>
+  Herdbell
+</a>

@@ -1,0 +1,12 @@
+---
+import { agents, type AgentId } from '../data/site';
+
+interface Props {
+  agent: AgentId;
+  size?: 'sm' | 'md';
+}
+
+const { agent, size = 'md' } = Astro.props;
+const a = agents[agent];
+---
+<span class:list={['agent-dot', { sm: size === 'sm' }]} style={`--c:${a.color}`}>{a.glyph}</span>

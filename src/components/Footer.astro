@@ -1,0 +1,20 @@
+---
+import Logo from './Logo.astro';
+import { contactEmail } from '../data/site';
+
+const year = new Date().getFullYear();
+---
+<footer class="footer">
+  <div class="container footer-inner">
+    <Logo small />
+    <nav class="footer-links" aria-label="Footer">
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="#privacy">Privacy</a>
+      <a href={`mailto:${contactEmail}`}>Contact</a>
+    </nav>
+    <p class="copy">© {year} Herdbell. Made for macOS.</p>
+  </div>
+  <p class="container disclaimer">Claude Code, OpenAI Codex, Cursor, and Google Antigravity are trademarks of their respective owners. Herdbell is not affiliated with or endorsed by them.</p>
+</footer>

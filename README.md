@@ -1,22 +1,42 @@
 # Herdbell — Landing Page
 
-Static landing page for **Herdbell**, a macOS menu bar app to monitor, control, and switch between AI coding agents.
-
-## Files
-- `index.html` — page markup
-- `styles.css` — all styles (dark theme, amber accent)
-- `script.js` — small interactions (cursor glow, scroll reveal, demo buttons, copy)
+Landing page for **Herdbell**, a macOS menu bar app to monitor, control, and switch between AI coding agents. Built with [Astro](https://astro.build).
 
 ## Run locally
-Open `index.html` in a browser, or:
 
 ```sh
-python3 -m http.server 8000
+npm install
+npm run dev
 ```
 
-No build step. Deploys as-is to GitHub Pages, Netlify, Vercel, or Cloudflare Pages.
+Open http://localhost:4321
 
-## Things to update before launch
-- Download / checkout links (`#download`, `#pricing` buttons)
-- Final price (currently `$12.99`) and Mac limit (currently 3)
-- Contact email in the footer (`hello@herdbell.app`)
+| Command           | What it does                         |
+| ----------------- | ------------------------------------ |
+| `npm run dev`     | Dev server with hot reload on :4321  |
+| `npm run build`   | Static build into `dist/`            |
+| `npm run preview` | Serve the production build locally   |
+
+## Structure
+
+```
+src/
+  pages/index.astro       page: assembles the sections
+  layouts/Layout.astro    <head>, fonts, global CSS, script
+  components/             one component per section + small shared pieces
+  data/site.ts            agents, nav, pricing, privacy points, FAQ
+  styles/global.css       all styles (dark theme, amber accent)
+  scripts/main.js         cursor glow, scroll reveal, demo buttons, copy
+public/favicon.svg
+```
+
+Most copy you'll want to tweak (price, trial days, Mac limit, FAQ, contact email) lives in `src/data/site.ts`.
+
+## Deploy
+
+`npm run build` outputs a fully static site in `dist/`, ready for Vercel, Netlify, Cloudflare Pages, or GitHub Pages.
+
+## Before launch
+- Point the Download / Start free trial buttons at real URLs
+- Confirm price (`$12.99`), Mac limit (3), and minimum macOS in `src/data/site.ts`
+- Set the real contact email in `src/data/site.ts`

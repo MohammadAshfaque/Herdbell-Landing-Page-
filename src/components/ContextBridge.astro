@@ -1,0 +1,53 @@
+---
+import AgentChip from './AgentChip.astro';
+---
+<section class="section bridge" id="context-bridge">
+      <div class="container bridge-inner">
+        <div class="bridge-copy">
+          <p class="eyebrow amber">Context Bridge</p>
+          <h2>Hit a usage limit?<br />Keep going in another agent.</h2>
+          <p class="sub left">
+            Herdbell reads your local session transcript and project files and builds a structured
+            continuation prompt. Paste it into another agent and keep working without explaining the whole project again.
+          </p>
+          <ol class="steps">
+            <li><span>1</span>Open Herdbell and select your session.</li>
+            <li><span>2</span>Click <b>Generate Context</b>.</li>
+            <li><span>3</span>Click <b>Copy Context</b> and paste it into the next agent.</li>
+          </ol>
+          <p class="fine">Runs fully on your Mac, with no AI API calls. How complete the output is depends on what your session transcript and project files contain.</p>
+        </div>
+
+        <div class="bridge-visual">
+          <div class="bridge-flow">
+            <AgentChip agent="claude" short />
+            <span class="flow-arrow">→</span>
+            <AgentChip agent="codex" short />
+          </div>
+          <div class="context-card">
+            <div class="context-head">
+              <span>Continuation prompt · saas-web</span>
+              <button class="copy-btn" type="button" data-copy>Copy Context</button>
+            </div>
+<pre class="context-body" id="context-text"><span class="h">## Goal</span>
+Ship the marketing site + pricing page for a SaaS app.
+
+<span class="h">## Completed</span>
+- Hero, features grid, footer components
+- Stripe checkout route in /api/checkout
+
+<span class="h">## Key decisions</span>
+- Next.js App Router, Tailwind, no UI kit
+- Lifetime plan only; no subscriptions
+
+<span class="h">## Open issues</span>
+- Navbar overlaps on &lt; 380px widths
+
+<span class="h">## Next steps</span>
+1. Build the pricing cards
+2. Wire "Buy" to /api/checkout
+3. Run the e2e tests</pre>
+          </div>
+        </div>
+      </div>
+    </section>

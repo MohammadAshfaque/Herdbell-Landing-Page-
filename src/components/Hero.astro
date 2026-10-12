@@ -1,0 +1,81 @@
+---
+import AgentDot from './AgentDot.astro';
+import AppleIcon from './AppleIcon.astro';
+---
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="container hero-inner">
+    <a href="#context-bridge" class="pill">
+      <span class="pill-tag">New</span> Context Bridge: switch agents without starting over
+      <span aria-hidden="true">→</span>
+    </a>
+    <h1>Every agent.<br /><span class="grad">One place.</span></h1>
+    <p class="lead">
+      Herdbell is a tiny macOS menu bar app that lets you monitor, approve, and reply to
+      your AI coding agents from a popup right at your cursor, so you never have to switch windows.
+    </p>
+    <div class="hero-ctas" id="download">
+      <a href="#pricing" class="btn btn-primary btn-lg">
+        <AppleIcon />
+        Download for macOS
+      </a>
+      <a href="#how" class="btn btn-ghost btn-lg">See how it works</a>
+    </div>
+    <p class="hero-meta">7-day free trial · One-time purchase · macOS 14+ · Apple Silicon &amp; Intel</p>
+
+    <!-- Product mock -->
+    <div class="mock-wrap">
+      <div class="mock-desktop">
+        <div class="menubar">
+          <span class="mb-left"><AppleIcon width={12} height={14} /> <b>Finder</b> File Edit View Go</span>
+          <span class="mb-right"><span class="mb-bell">🔔<i></i></span> Mon 9:41</span>
+        </div>
+
+        <div class="popup" role="img" aria-label="Herdbell popup showing three agent sessions">
+          <div class="popup-head">
+            <span>Agents</span>
+            <span class="kbd-row"><kbd>⌥</kbd><kbd>Space</kbd></span>
+          </div>
+
+          <div class="session">
+            <AgentDot agent="claude" />
+            <div class="session-body">
+              <div class="session-top"><b>Claude Code</b><span class="proj">saas-web</span><span class="status working">Working</span></div>
+              <div class="session-sub">Building pricing page components · 12m</div>
+            </div>
+          </div>
+
+          <div class="session highlight">
+            <AgentDot agent="codex" />
+            <div class="session-body">
+              <div class="session-top"><b>Codex</b><span class="proj">saas-api</span><span class="status approval">Needs approval</span></div>
+              <div class="session-sub">Wants to run <code>npm install stripe</code></div>
+              <div class="session-actions">
+                <button class="mini allow" type="button">Allow</button>
+                <button class="mini deny" type="button">Deny</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="session">
+            <AgentDot agent="cursor" />
+            <div class="session-body">
+              <div class="session-top"><b>Cursor</b><span class="proj">saas-web</span><span class="status done">Finished</span></div>
+              <div class="session-sub">Fixed 4 layout bugs in navbar · 3m ago</div>
+            </div>
+          </div>
+
+          <div class="popup-reply">
+            <input type="text" placeholder="Reply to Claude Code…" aria-label="Reply" />
+            <span class="send">↵</span>
+          </div>
+        </div>
+
+        <div class="fake-cursor" aria-hidden="true">
+          <span class="fc-glow"></span>
+          <svg width="22" height="22" viewBox="0 0 24 24"><path d="M5 3l14 8-6 1.5L10 19z" fill="#fff" stroke="#000" stroke-width="1.3" stroke-linejoin="round"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

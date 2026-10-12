@@ -1,0 +1,13 @@
+---
+import Logo from './Logo.astro';
+import { navLinks } from '../data/site';
+---
+<header class="nav">
+  <div class="container nav-inner">
+    <Logo />
+    <nav class="nav-links" aria-label="Primary">
+      {navLinks.map((l) => <a href={l.href}>{l.label}</a>)}
+    </nav>
+    <a href="#download" class="btn btn-primary btn-sm">Download</a>
+  </div>
+</header>

@@ -1,0 +1,95 @@
+---
+import AgentDot from './AgentDot.astro';
+---
+<section class="section" id="features">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Features</p>
+      <h2>Small app. Everything you need.</h2>
+      <p class="sub">Built for people running more than one agent at a time.</p>
+    </div>
+
+    <div class="bento">
+      <article class="card span-2">
+        <div class="card-icon">◎</div>
+        <h3>Unified agent monitoring</h3>
+        <p>Every running session in one list, with agent, project, status, current activity, running time, and last message.</p>
+        <div class="status-legend">
+          <span class="status working">Working</span>
+          <span class="status waiting">Waiting</span>
+          <span class="status done">Finished</span>
+          <span class="status error">Error</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-icon">⌥</div>
+        <h3>Instant cursor popup</h3>
+        <p>Press your shortcut and Herdbell opens right where your mouse is. Check in, act, and get back to work.</p>
+        <div class="kbd-row big"><kbd>⌥</kbd><kbd>Space</kbd></div>
+      </article>
+
+      <article class="card">
+        <div class="card-icon">✦</div>
+        <h3>Smart cursor alerts</h3>
+        <p>A subtle color-coded glow shows up only when an agent needs you.</p>
+        <ul class="alert-list">
+          <li><span class="glow-dot" style="--g:var(--amber)"></span>Permission required</li>
+          <li><span class="glow-dot" style="--g:var(--blue)"></span>Waiting for reply</li>
+          <li><span class="glow-dot" style="--g:var(--green)"></span>Task finished</li>
+          <li><span class="glow-dot" style="--g:var(--red)"></span>Error occurred</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="card-icon">✓</div>
+        <h3>Approve or deny actions</h3>
+        <p>When an agent wants to run a command, decide right from the popup.</p>
+        <div class="approve-demo">
+          <div class="approve-line"><b>Codex</b> wants to execute</div>
+          <code>npm install</code>
+          <div class="session-actions">
+            <button class="mini allow" type="button">Allow</button>
+            <button class="mini deny" type="button">Deny</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-icon">↩</div>
+        <h3>Reply instantly</h3>
+        <p>Send instructions to supported agents through their own integrations.</p>
+        <div class="chips">
+          <span>Continue working.</span>
+          <span>Run the tests.</span>
+          <span>Fix the remaining errors.</span>
+          <span>Explain what you changed.</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-icon">≡</div>
+        <h3>Session activity history</h3>
+        <p>See what your agents have actually been doing.</p>
+        <ul class="timeline">
+          <li><span>09:12</span>Ran <code>pnpm test</code></li>
+          <li><span>09:14</span>Permission granted</li>
+          <li><span>09:21</span>Edited 6 files</li>
+          <li class="err"><span>09:23</span>Build error in api/routes</li>
+        </ul>
+      </article>
+
+      <article class="card span-2">
+        <div class="card-icon">⚡</div>
+        <h3>One-click agent connections</h3>
+        <p>Herdbell finds supported agents installed on your Mac. Connect or disconnect each one with a toggle. Your existing configs are preserved and backed up before anything changes.</p>
+        <div class="connect-list">
+          <div class="connect"><AgentDot agent="claude" size="sm" />Claude Code<span class="found">Detected</span><span class="toggle on"></span></div>
+          <div class="connect"><AgentDot agent="codex" size="sm" />Codex<span class="found">Detected</span><span class="toggle on"></span></div>
+          <div class="connect"><AgentDot agent="cursor" size="sm" />Cursor<span class="found">Detected</span><span class="toggle on"></span></div>
+          <div class="connect"><AgentDot agent="antigravity" size="sm" />Antigravity<span class="found muted">Detected</span><span class="toggle"></span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
