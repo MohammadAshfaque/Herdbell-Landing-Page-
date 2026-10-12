@@ -1,0 +1,25 @@
+---
+import AgentDot from './AgentDot.astro';
+---
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">A day with Herdbell</p>
+      <h2>Three agents. One calm workflow.</h2>
+    </div>
+    <div class="story">
+      <div class="story-table">
+        <div class="row head"><span>Agent</span><span>Task</span><span>Status</span></div>
+        <div class="row"><span><AgentDot agent="claude" size="sm" />Claude Code</span><span>Building frontend</span><span class="status working">Working</span></div>
+        <div class="row"><span><AgentDot agent="codex" size="sm" />Codex</span><span>Developing backend</span><span class="status approval">Needs approval</span></div>
+        <div class="row"><span><AgentDot agent="cursor" size="sm" />Cursor</span><span>Fixing UI bugs</span><span class="status done">Finished</span></div>
+      </div>
+      <ol class="story-steps">
+        <li><b>A soft amber glow</b> appears near your cursor while you're reading docs.</li>
+        <li><b>Press the shortcut.</b> Codex needs permission, so you approve it in one click.</li>
+        <li><b>Later, Claude Code hits its limit.</b> You generate a Context Bridge prompt and paste it into Codex.</li>
+        <li><b>The frontend keeps moving.</b> You never had to rebuild the conversation.</li>
+      </ol>
+    </div>
+  </div>
+</section>

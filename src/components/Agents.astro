@@ -1,0 +1,15 @@
+---
+import AgentChip from './AgentChip.astro';
+import { agents, type AgentId } from '../data/site';
+
+const ids = Object.keys(agents) as AgentId[];
+---
+<section class="agents">
+  <div class="container">
+    <p class="eyebrow center">Works with the agents you already use</p>
+    <div class="agent-row">
+      {ids.map((id) => <AgentChip agent={id} />)}
+    </div>
+    <p class="agents-note">No AI account login. No API keys. Herdbell connects through each agent's local hooks.</p>
+  </div>
+</section>

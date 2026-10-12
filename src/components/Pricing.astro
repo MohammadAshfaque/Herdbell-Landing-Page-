@@ -1,0 +1,32 @@
+---
+import { pricing } from '../data/site';
+
+const features = [
+  'All features, including Context Bridge',
+  'Claude Code, Codex, Cursor & Antigravity',
+  `Use on up to ${pricing.macs} Macs`,
+  'Free updates',
+  `${pricing.trialDays}-day free trial, no card required`,
+];
+---
+<section class="section" id="pricing">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Pricing</p>
+      <h2>Pay once. Own it.</h2>
+      <p class="sub">No subscription. Try everything free for {pricing.trialDays} days.</p>
+    </div>
+    <div class="price-card">
+      <div class="price-top">
+        <span class="plan">{pricing.plan}</span>
+        <div class="price"><span class="currency">$</span>{pricing.dollars}<span class="cents">.{pricing.cents}</span></div>
+        <span class="once">one-time payment</span>
+      </div>
+      <ul class="price-list">
+        {features.map((f) => <li>{f}</li>)}
+      </ul>
+      <a href="#download" class="btn btn-primary btn-lg block">Start free trial</a>
+      <p class="fine center">{pricing.minMacOS} or later</p>
+    </div>
+  </div>
+</section>

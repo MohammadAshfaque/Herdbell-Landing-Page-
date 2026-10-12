@@ -1,0 +1,13 @@
+---
+import AgentDot from './AgentDot.astro';
+import { agents, type AgentId } from '../data/site';
+
+interface Props {
+  agent: AgentId;
+  short?: boolean;
+}
+
+const { agent, short = false } = Astro.props;
+const a = agents[agent];
+---
+<span class="agent-chip"><AgentDot agent={agent} size="sm" />{short ? a.short : a.name}</span>

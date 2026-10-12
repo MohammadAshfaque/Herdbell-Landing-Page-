@@ -1,0 +1,18 @@
+---
+import { privacyPoints } from '../data/site';
+---
+<section class="section" id="privacy">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Privacy &amp; performance</p>
+      <h2>Native, local, and lightweight.</h2>
+      <p class="sub">Herdbell is built in Swift, SwiftUI, and AppKit, and your session data never leaves your Mac.</p>
+    </div>
+    <div class="grid-3">
+      {privacyPoints.map((p) => (
+        <div class="mini-card"><h4>{p.title}</h4><p>{p.body}</p></div>
+      ))}
+    </div>
+    <p class="fine center">Network access is used only for license validation and app updates.</p>
+  </div>
+</section>
