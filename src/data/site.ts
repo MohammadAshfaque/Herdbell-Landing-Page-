@@ -24,7 +24,7 @@ export const pricing = {
   minMacOS: 'macOS 14 Sonoma',
 };
 
-export const contactEmail = 'hello@herdbell.app';
+export const contactEmail = 'founder@herdbell.com';
 
 export const privacyPoints = [
   { title: 'No account login', body: 'No signing into AI providers and no API keys to paste.' },
